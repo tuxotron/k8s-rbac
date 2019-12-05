@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: rafa-core-api-access-binding
+  namespace: rafa
+subjects:
+- kind: User
+  name: rafa
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: rafa-core-api-access
+  apiGroup: rbac.authorization.k8s.io
